@@ -13,6 +13,14 @@ Aircraft
 
 I selected the QuadRotorX configuration which was the second option.
 
+.. code-block:: console
+
+    M2  M1
+     \ /
+      X
+     / \
+    M3  M4
+
 
 Mounting
 --------

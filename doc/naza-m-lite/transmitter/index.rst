@@ -157,13 +157,34 @@ going...
 
 #. Exit the MIX2 menu.
 
-For reference, I found the following video helpful for configuring my system
-though I managed to simplify it a little by not needing any sub-trim
-modifications.
+For reference, I found the following video helpful for configuring parts of
+my system though I managed to simplify it a little by not needing any sub-trim
+modifications. This video did not cover setting the IOC configuration.
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Obewk3RnPs0" frameborder="0" allowfullscreen></iframe>
+
+
+Intelligent Orientation Control
++++++++++++++++++++++++++++++++
+
+I used the flaps channel to configure the IOC settings.
+The IOC settings supports 3 modes; Home Lock, Course Lock and Off. Once
+again the DX6i only has 2 position switches so I'll be using the FLAP switch
+to alternate between Off and Home Lock. I can't really see me using the
+Course Lock option so this is not a great loss.
+
+#. Enter the ADJUST LIST menu by clicking the scroll button.
+#. Enter FLAPS menu.
+
+    .. code-block:: console
+
+             FLAPS
+
+              FLAP  ELEV
+        NORM  v 86      0
+        LAND  ^ 80      0
 
 
 Test Configuration
@@ -192,6 +213,10 @@ ELEV D/R switch off, the mode should return to Attitude.
 With this test we can see how to change into any of the Control Modes and how
 the ELEV D/R switch changes MC into Failsafe mode from any of the GPS, ATTI or
 Manual control modes.
+
+Now move to the NAZA Assistant's Advanced -> IOC display. With the FLAP switch
+in the off position the IOC mode should show that it is in the Off mode. Flip
+the FLAP switch and the IOC mode should change to the Home Lock mode.
 
 
 Configure Failsafe Settings

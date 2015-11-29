@@ -2,7 +2,7 @@
 quadcopter
 ==========
 
-I received a DJI F450 multi-rotor drone along with a Spektrum DX6i
+I received a DJI Flaem Wheel F450 multi-rotor drone along with a Spektrum DX6i
 transmitter as a birthday gift. The drone came un-assembled as my wife new
 that I would enjoy building it up from scratch and learning all about it.
 
@@ -14,7 +14,7 @@ and flight controller into a working drone.
 There is a lot to learn and a lot to set up so I'm using this project to hold
 my working notes as I build the quadcopter and configure the transmitter and
 associated main controller (MC) software. This will help me remember how to
-do it all again if I need to and might even help someone else embarking on a
+do it all again if I need to and may even help someone else embarking on a
 similar journey.
 
 The MC I'm using is a DJI NAZA-M LITE. It's possible that in future I may get
