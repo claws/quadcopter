@@ -7,6 +7,7 @@ Basic panel of the DJI NAZA-M LITE Assitant application.
 .. toctree::
     :maxdepth: 1
 
+
 Aircraft
 --------
 

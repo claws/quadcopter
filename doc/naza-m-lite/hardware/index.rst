@@ -9,10 +9,14 @@ receiver that came with the Spektrum DX6i transmitter.
 VU
 ---
 
+The VU device monitors the battery Voltage and provides a regulated power
+feed to the MC.
+
 The VU device can be connected to a variety of batteries from a 2S (7.2V) to
 a 6S (26.0V). I have a 2200mAh 3S battery.
 
 The VU module connects to the X3 port on the MC.
+
 
 MC
 ---
@@ -49,26 +53,14 @@ the back of the craft close to the EXP port on the MC that it plugs in to. All
 the loose cable was secured with cable ties to make it tidy.
 
 
-Binding Receiver
-----------------
+Binding
+-------
 
-Insert the Bind plug into the BIND/BATT port of the AR610 receiver. Power up
-the receiver. I poewred it up using the throttle cable from the MC and
-connected a battery to the MC via the VU device. The receiver starts to flash
-with its orange LED. While holding the Trainer switch on I then powered on the
-transmitter. The transmitter starts in binding mode and after a short while the
-receiver stopped flashing and then the orange LED came on steady on the receiver.
-This indicates that it has successfully bound with the transmitter.
+Follow the bind procedure detailed in the section :ref:`binding-receiver-label`.
 
-It is recommended that you bind the receiver twice. Binding locks in the
-throttle that will be applied in the case that the transmitter signal is lost.
-
-The first bind establishes the communication channel from the transmitter
-to the receiver so you can begin configuring your device. After you play
-around with the various settings you may end up reversing one or more of the
-channels. This may reverse the original throttle setting saved during the
-initial bind. It is important to re-bind to ensure that the correct throttle
-signal will be applied if the transmitter signal is lost.
+Now that the receiver is bound the actions on the transimtter will be relayed
+to the receiver and passed on to the MC. We can now start configuring the
+transmitter settings.
 
 
 Receiver Connection Configuration
@@ -87,8 +79,10 @@ X2          AUX1
 X3
 ==========  =============
 
-My F450 came with red and white motor struts. I used the white struts for the
-two front motors and the red struts for the two rear motors.
+My F450 came with red and white motor struts. There was no instruction about
+which color should be used for the front and the rear and I didn't find any
+common convention from some brief internet searches. I used the white struts
+for the two front motors and the red struts for the two rear motors.
 
 Propellers
 ----------

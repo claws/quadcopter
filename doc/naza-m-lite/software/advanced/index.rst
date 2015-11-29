@@ -88,8 +88,33 @@ backward direction always moves back toward the Home Lock position.
     The multi-rotor must be in ATTI or GPS mode and be further than 10m away
     from the home point.
 
+.. figure:: ../resources/naza-m-ioc-home-lock.png
+
+There are 2 ways to record the forward direction in Home Lock mode;
+automatically and manually.
+
+The current position of the quadcopter will be automatically recorded as the
+home point when the throttle is first move AFTER 6 or more GPS satellites have
+been found.
+
+After 6 or more GPS satellites have been found a new home position can be
+manually set by toggling between Course Lock and Home Lock quickly 3 - 5
+times.
+
 
 Course Lock
 +++++++++++
 
-TBD
+When the Naza MC is switched to Course Lock IOC mode the forward direction
+is always that of the recorded nose direction.
+
+.. figure:: ../resources/naza-m-ioc-course-lock.png
+
+There are 2 ways to record the forward direction in Course Lock mode;
+automatically and manually.
+
+When in course lock mode the forward direction will be automatically recorded
+30s after starting the quadcopter.
+
+To manually set the forward direction toggle quickly between Course Lock and
+Off 3 to 5 times (Off -> Course Lock -> Off represents one transition).
