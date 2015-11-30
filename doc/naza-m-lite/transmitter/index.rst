@@ -215,6 +215,17 @@ With this test we can see how to change into any of the Control Modes and how
 the ELEV D/R switch changes MC into Failsafe mode from any of the GPS, ATTI or
 Manual control modes.
 
+In summary:
+
+.. code-block:: console
+
+    GPS:      GEAR 0  MIX:0
+    Manual:   GEAR 1  MIX:0
+    GPS:      GEAR 1  MIX:0
+    Attitude: GEAR 1  MIX:1
+    Failsafe: ELEV D/R
+
+
 Now move to the NAZA Assistant's Advanced -> IOC display. With the FLAP switch
 in the off position the IOC mode should show that it is in the Off mode. Flip
 the FLAP switch and the IOC mode should change to the Home Lock mode.
@@ -226,10 +237,12 @@ Configure Failsafe Settings
 The failsafe settings will be applied when the receiver loses connection with
 the transmitter.
 
-With the transmitter turned off set the throttle to the level to about 30-40%
-and flip the ELEV D/R switch to on (1). This throttle level and switch setting
-will become the failsafe settings applied by the receiver when it detects a
-loss of connection with the transmitter.
+With the transmitter turned off set the throttle level to about 30-40%. This
+throttle level will become the failsafe setting applied by the receiver when
+it detects a loss of connection with the transmitter.
+
+The Spektrum AR610 receiver that I'm using apparently only supports failsafe
+settings on the throttle channel. Other device can support other channels.
 
 Follow the bind procedure detailed in the section :ref:`binding-receiver-label`.
 

@@ -6,86 +6,16 @@ associated GPS receiver, LED status device and connected the Spektrum AR610
 receiver that came with the Spektrum DX6i transmitter.
 
 
-VU
----
-
-The VU device monitors the battery Voltage and provides a regulated power
-feed to the MC.
-
-The VU device can be connected to a variety of batteries from a 2S (7.2V) to
-a 6S (26.0V). I have a 2200mAh 3S battery.
-
-The VU module connects to the X3 port on the MC.
-
-
-MC
----
-
-The Main Controller (MC) is the brains of the flight system. The MC connects
-to the motor controllers (ESC) and the remote control receiver.
-
-The MC has a built-in Inertial Measurement Unit (IMU) that consists of one
-3-axis accelerometer, one 3-axis gyroscope and a barometer for sensing the
-attitude and altitude.
-
-The MC should be placed as close as possible to the center of the frame. The
-line on the top of the MC should be aligned with the center line of the craft
-and should be pointing to the nose. This will result in the motor ports facing
-the front of the craft.
-
-The MC came with lots of 3M double sided tape strips which I used to stick it
-in place to the F450 base plate. I connected the motor wires before sticking
-the MC in place.
-
-GPS
----
-
-The GPS/Compass module provides the MC with position and direction information.
-
-The NAZA logo marked on the module should face the sky and the orientation
-arrow should point forward.
-
-The GPS/Compass module came with a little carbon rod and two end pieces. I
-glued the end pieces to the carbon rod and stuck the GPS/Compass module to the
-top using a piece of 3M double sided tape. I then secured the base to one of
-the rear facing motor struts using the strut screws. This placed it towards
-the back of the craft close to the EXP port on the MC that it plugs in to. All
-the loose cable was secured with cable ties to make it tidy.
-
-
-Binding
--------
-
-Follow the bind procedure detailed in the section :ref:`binding-receiver-label`.
-
-Now that the receiver is bound the actions on the transmitter will be relayed
-to the receiver and passed on to the MC. We can now start configuring the
-transmitter settings.
-
-
-Receiver Connection Configuration
----------------------------------
-
-==========  =============
-MC Channel  AR610 Channel
-==========  =============
-A           AILE
-E           ELEV
-T           THRO
-R           RUDD
-U           GEAR
-X1
-X2          AUX1
-X3
-==========  =============
+Flame Wheel F450
+----------------
 
 My F450 came with red and white motor struts. There was no instruction about
 which color should be used for the front and the rear and I didn't find any
 common convention from some brief internet searches. I used the white struts
 for the two front motors and the red struts for the two rear motors.
 
-Propellers
-----------
+Motors
+++++++
 
 The F450 is a QuadRotorX configuration and when coupled with the NAZA M the
 motor numbering is as follows:
@@ -111,6 +41,118 @@ Motor  Direction  Prop Color
 Discuss how to check the motors are turning the correct way using a small
 piece of paper. Switch two of the ESC wires to alter the direction if
 necessary.
+
+
+DJI NAZA-M LITE
+---------------
+
+The NAZA-M LITE provides the brains of the quadcopter. It comes as a set of
+discrete devices that are covered in more detail below.
+
+.. figure:: resources/dji-naza-lite.jpg
+
+
+MC
++++
+
+The Main Controller (MC) is the brains of the flight system. The MC connects
+to the motor controllers (ESC) and the remote control receiver.
+
+.. figure:: resources/dji-naza-mc.jpg
+
+The MC has a built-in Inertial Measurement Unit (IMU) that consists of one
+3-axis accelerometer, one 3-axis gyroscope and a barometer for sensing the
+attitude and altitude.
+
+The MC should be placed as close as possible to the center of the frame. The
+line on the top of the MC should be aligned with the center line of the craft
+and should be pointing to the nose. This will result in the motor ports facing
+the front of the craft.
+
+The MC came with lots of 3M double sided tape strips which I used to stick it
+in place to the F450 base plate. I connected the motor wires before sticking
+the MC in place.
+
+Connections
+^^^^^^^^^^^
+
+=======  =======  ========  ========  ==============
+NAZA MC  NAZA VU  NAZA LED  NAZA GPS  Spektrum AR610
+=======  =======  ========  ========  ==============
+A                                     AILE
+E                                     ELEV
+T                                     THRO
+R                                     RUDD
+U                                     GEAR
+X1
+X2                                    AUX1
+X3       VU
+LED               LED
+EXP                         GPS
+=======  =======  ========  ========  ==============
+
+
+VU
++++
+
+The VU device monitors the battery Voltage and provides a regulated power
+feed to the MC.
+
+.. figure:: resources/dji-naza-vu.jpg
+
+The VU device can be connected to a variety of batteries from a 2S (7.2V) to
+a 6S (26.0V). I have a 2200mAh 3S battery.
+
+The VU module connects to the X3 port on the MC.
+
+
+GPS
++++
+
+The GPS/Compass module provides the MC with position and direction information.
+
+.. figure:: resources/dji-naza-gps.jpg
+
+The NAZA logo marked on the module should face the sky and the orientation
+arrow should point forward.
+
+The GPS/Compass module came with a little carbon rod and two end pieces. I
+glued the end pieces to the carbon rod and stuck the GPS/Compass module to the
+top using a piece of 3M double sided tape. I then secured the base to one of
+the rear facing motor struts using the strut screws. This placed it towards
+the back of the craft close to the EXP port on the MC that it plugs in to. All
+the loose cable was secured with cable ties to make it tidy.
+
+
+LED
++++
+
+The LED unit provide visual status while operating the quadcopter and the
+USB interface for connecting the MC to the NAZA Software Assistant program.
+
+.. figure:: resources/dji-naza-led.jpg
+
+
+Spektrum DX6i Transmitter
+-------------------------
+
+.. figure:: resources/spektrum-dx6i.png
+
+
+Spektrum AR610 Receiver
+-----------------------
+
+.. figure:: resources/spektrum-ar610.jpg
+
+Binding
++++++++
+
+Follow the bind procedure detailed in the section :ref:`binding-receiver-label`.
+
+Now that the receiver is bound the actions on the transmitter will be relayed
+to the receiver and passed on to the MC. We can now start configuring the
+transmitter settings.
+
 
 
 Battery Charger
