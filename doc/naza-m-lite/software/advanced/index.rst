@@ -2,7 +2,7 @@ Advanced
 ========
 
 This section of the documentation covers how I configured settings in the
-Advanced panel of the DJI NAZA-M LITE Assitant application.
+Advanced panel of the DJI NAZA-M LITE Assistant application.
 
 Motor
 -----
@@ -32,7 +32,7 @@ Immediate
 
 When the Cut Off Type is set to Immediate, once the motors have started
 and the throttle has gone over 10% then the motors will stop immediately
-(irrespetive of Control Mode; e.g. GPS Atti, Manual) when the throttle stick
+(irrespective of Control Mode; e.g. GPS Atti, Manual) when the throttle stick
 is brought back under 10% again.
 
 In this mode if you move the throttle stick over 10% within 5 seconds of the

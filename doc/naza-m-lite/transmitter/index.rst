@@ -29,7 +29,7 @@ Binding Receiver
 ----------------
 
 Insert the Bind plug into the BIND/BATT port of the AR610 receiver. Power up
-the receiver. I poewred it up using the throttle cable from the MC and
+the receiver. I powered it up using the throttle cable from the MC and
 connected a battery to the MC via the VU device. The receiver starts to flash
 with its orange LED. While holding the Trainer switch on I then powered on the
 transmitter. The transmitter starts in binding mode and after a short while
@@ -52,7 +52,7 @@ signal will be applied if the transmitter signal is lost.
 Configure Transmitter
 ---------------------
 
-It is best to connect the NAZA Assistant softare while performing this
+It is best to connect the NAZA Assistant software while performing this
 configuration step so that the results are immediately visible. So, connect
 the MC with the NAZA Assistant software by plugging a USB cable from the PC
 to the LED device. Power on the transmitter and check that the transmitter
@@ -62,7 +62,7 @@ display.
 Control Sticks
 ++++++++++++++
 
-Moving the Aileron and Rudder control sticks on the transimtter resulted in
+Moving the Aileron and Rudder control sticks on the transmitter resulted in
 the opposite action happening at the MC. This can be resolved by reversing the
 direction in the NAZA Assistant software or on the transmitter. I made a
 choice to keep the software assistant channel settings in the NORM mode so I
@@ -194,9 +194,10 @@ With all the transmitter switches off, power on the transmitter and connect
 the MC to the NAZA Assistant software using the USB cable so we can verify the
 correct Control Modes are being used.
 
-By default, with the GEAR switch in the off position, the Control Mode should
-indicate GPS mode. Flip the ELEV D/R switch and the Control Mode should move
-to Failsafe. Turn the ELEV D/R switch off, the mode should return to GPS.
+Monitor the NAZA Assistant's Basic -> RC display. By default, with the GEAR
+switch in the off position, the Control Mode should indicate GPS mode. Flip
+the ELEV D/R switch and the Control Mode should move to Failsafe. Turn the
+ELEV D/R switch off, the mode should return to GPS.
 
 Turning the GEAR switch to on should move the Control Mode to Manual. Flip the
 ELEV D/R switch and the Control Mode should move to Failsafe. Turn the ELEV
@@ -232,17 +233,11 @@ loss of connection with the transmitter.
 
 Follow the bind procedure detailed in the section :ref:`binding-receiver-label`.
 
+
 Test Failsafe Settings
 ----------------------
 
 TBD
-
-
-
-IOC
----
-
-In this configuration the IOC mode can be changed by using the ? toggle switch.
 
 TODO: Discuss how to manually set the forward direction and the home point
 using this transmitter configuration.

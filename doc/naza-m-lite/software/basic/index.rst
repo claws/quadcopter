@@ -2,7 +2,7 @@ Basic
 =====
 
 This section of the documentation covers how I configured settings in the
-Basic panel of the DJI NAZA-M LITE Assitant application.
+Basic panel of the DJI NAZA-M LITE Assistant application.
 
 .. toctree::
     :maxdepth: 1
@@ -37,7 +37,7 @@ I set the Receiver Type to Traditional.
 
 When the transmitter has been successfully bound to the receiver then moving
 the control sticks will result in the sliders moving in the Command Sticks
-Calibrartion area.
+Calibration area.
 
 I chose to leave the REV/NORM settings set to NORM and made an reversing
 changes on the transmitter.

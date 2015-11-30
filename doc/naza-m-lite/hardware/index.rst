@@ -58,7 +58,7 @@ Binding
 
 Follow the bind procedure detailed in the section :ref:`binding-receiver-label`.
 
-Now that the receiver is bound the actions on the transimtter will be relayed
+Now that the receiver is bound the actions on the transmitter will be relayed
 to the receiver and passed on to the MC. We can now start configuring the
 transmitter settings.
 

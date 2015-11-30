@@ -2,7 +2,7 @@
 quadcopter
 ==========
 
-I received a DJI Flaem Wheel F450 multi-rotor drone along with a Spektrum DX6i
+I received a DJI Flame Wheel F450 multi-rotor drone along with a Spektrum DX6i
 transmitter as a birthday gift. The drone came un-assembled as my wife new
 that I would enjoy building it up from scratch and learning all about it.
 
