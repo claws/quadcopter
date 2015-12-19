@@ -62,8 +62,7 @@ or GPS Atti Mode, any one of following four cases will stop motors:
 Failsafe Settings (F/S)
 -----------------------
 
-TBD
-
+I set my failsafe settings to 'Go Home and Landing'.
 
 
 Intelligent Orientation Control (IOC)
@@ -75,6 +74,7 @@ Orientation Control (IOC) settings let you change this using two different
 approaches. The first is called Home Lock and the second is called
 Course Lock.
 
+.. figure:: ../resources/naza-m-ioc-test.png
 
 Home Lock
 +++++++++
@@ -94,7 +94,7 @@ There are 2 ways to record the forward direction in Home Lock mode;
 automatically and manually.
 
 The current position of the quadcopter will be automatically recorded as the
-home point when the throttle is first move AFTER 6 or more GPS satellites have
+home point when the throttle is first moved AFTER 6 or more GPS satellites have
 been found.
 
 After 6 or more GPS satellites have been found a new home position can be

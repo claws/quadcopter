@@ -221,7 +221,7 @@ In summary:
 
     GPS:      GEAR 0  MIX:0
     Manual:   GEAR 1  MIX:0
-    GPS:      GEAR 1  MIX:0
+    GPS:      GEAR 0  MIX:1
     Attitude: GEAR 1  MIX:1
     Failsafe: ELEV D/R
 
@@ -231,8 +231,8 @@ in the off position the IOC mode should show that it is in the Off mode. Flip
 the FLAP switch and the IOC mode should change to the Home Lock mode.
 
 
-Configure Failsafe Settings
----------------------------
+Configure Receiver Failsafe Settings
+------------------------------------
 
 The failsafe settings will be applied when the receiver loses connection with
 the transmitter.
@@ -242,17 +242,6 @@ throttle level will become the failsafe setting applied by the receiver when
 it detects a loss of connection with the transmitter.
 
 The Spektrum AR610 receiver that I'm using apparently only supports failsafe
-settings on the throttle channel. Other device can support other channels.
+settings on the throttle channel. Other devices can support other channels.
 
 Follow the bind procedure detailed in the section :ref:`binding-receiver-label`.
-
-
-Test Failsafe Settings
-----------------------
-
-TBD
-
-TODO: Discuss how to manually set the forward direction and the home point
-using this transmitter configuration.
-
-
