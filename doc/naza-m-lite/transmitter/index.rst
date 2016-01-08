@@ -234,14 +234,21 @@ the FLAP switch and the IOC mode should change to the Home Lock mode.
 Configure Receiver Failsafe Settings
 ------------------------------------
 
-The failsafe settings will be applied when the receiver loses connection with
-the transmitter.
-
-With the transmitter turned off set the throttle level to about 30-40%. This
-throttle level will become the failsafe setting applied by the receiver when
-it detects a loss of connection with the transmitter.
+Receivers can be configured with failsafe settings that will be applied
+when the receiver loses connection with the transmitter.
 
 The Spektrum AR610 receiver that I'm using apparently only supports failsafe
 settings on the throttle channel. Other devices can support other channels.
+
+With the transmitter turned off set the throttle level to about ~40%. This
+throttle level will become the failsafe setting applied by the receiver when
+it detects a loss of connection with the transmitter. The goal of this
+throttle level setting is to cause the quadcopter to stop and slowly descend.
+
+.. warning::
+
+    If you change the payload on the quadcopter you may need to reset the
+    throttle level. Also, be mindful of this failsafe setting if you are over
+    trees or over a large body of water!
 
 Follow the bind procedure detailed in the section :ref:`binding-receiver-label`.

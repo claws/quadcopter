@@ -11,5 +11,6 @@ hardware and software.
    software/index.rst
    transmitter/index.rst
    flight-testing/index.rst
-   references.rst
    flight-log/index.rst
+   fpv/index.rst
+   references.rst

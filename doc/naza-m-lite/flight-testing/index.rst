@@ -11,16 +11,18 @@ The compass only needs to be calibrated once though you should repeat it
 if you make significant changes to the drone that might affect the compass.
 
 Power on the quadcopter. Use the transmitter to quickly switch between GPS
-mode and Manual mode 11 times. I have no idea what the correct strategy is
-but this sequence seems to work for me.
+mode and Manual mode until the LED changes to a constant orange/yellow which
+indicates the start of the horizontal calibration. I find that I need to
+perform the switch combination 11 times to enter the calibration mode.
 
-The LED should change to a constant yellow which indicates the start of the
-horizontal calibration. Keeping the quadcopter flat rotate it horizontally
-around 360 degrees. Once the rotation is complete the LED should change to
-green which indicates the start of the vertical calibration. Now orient the
-quadcopter on its side and once again rotate it around 360 degress.
+Keeping the quadcopter flat rotate it horizontally around 360 degrees. Once
+the rotation is complete the LED should change to green which indicates the
+start of the vertical calibration. Now orient the quadcopter on its side and
+once again rotate it around 360 degress.
 
-Once the final rotation is complete the LED should return to its normal
+.. figure:: resources/dji-naza-gps-compass-calibration.png
+
+When the final rotation is complete the LED should return to its normal
 sequence for the current control mode.
 
 

@@ -27,7 +27,27 @@ Mounting
 
 In the hardware section I mentioned that I had set up the MC in the centre
 of the bottom plate with the line on the MC pointing out the nose of the
-multi-rotor.
+multi-rotor. This is my best attempt at guessing the quadcopters centre of
+gravity.
+
+I have the GPS unit mounted which requires knowledge of its offset from the
+centre of gravity to perform correctly.
+
+I originally had the GPS puck mounted on the carbon rod which set it up
+about 6cm from the top plate. After some early acrobatitcs trials it had
+been easily ripped off from a hard crash. I have since discarded the
+carbon rod and now mount it on the rear right strut using double sided tape.
+This reduces the likelyhood of damage to the GPS unit.
+
+The offset measurements I'm using for the GPS unit are:
+
+======  =====
+Co-ord  Dist
+======  =====
+X       -8 cm
+Y        8 cm
+Z       -4 cm
+======  =====
 
 
 RC
@@ -52,4 +72,21 @@ changes on the transmitter.
 Gain
 ----
 
-I did not mess around with the gain settings.
+The default gain settings seem to work fine for my setup. I did briefly mess
+around with them but reverted back to the default values.
+
+=========  =====
+Basic      Value
+=========  =====
+Pitch      145%
+Roll       145%
+Yaw        150%
+Vertical   130%
+=========  =====
+
+=========  =====
+Attitude   Value
+=========  =====
+Pitch      130%
+Roll       130%
+=========  =====

@@ -14,6 +14,7 @@ which color should be used for the front and the rear and I didn't find any
 common convention from some brief internet searches. I used the white struts
 for the two front motors and the red struts for the two rear motors.
 
+
 Motors
 ++++++
 
@@ -28,6 +29,10 @@ motor numbering is as follows:
      / \
     3   4
 
+The DJI propellors use a color coding to help identify which motor they should
+be used on. Propellors with a silver color at the centre are for the counter
+clockwise (CCW) motors and propellors with a black centre are for the
+clockwise (CW) motors.
 
 =====  =========  ==========
 Motor  Direction  Prop Color
@@ -38,9 +43,12 @@ Motor  Direction  Prop Color
 4      CW         Black
 =====  =========  ==========
 
-Discuss how to check the motors are turning the correct way using a small
-piece of paper. Switch two of the ESC wires to alter the direction if
-necessary.
+Once the motors were connected to the ESC's and mounted I tested their spin
+direction using a very flimsy piece of paper. By gently bringing the piece of
+paper to the spinning motor it will get pull to the spin direction.
+
+If any of the motors are spinning in the wrong direction switch two of the
+ESC wires to alter the direction.
 
 
 DJI NAZA-M LITE
@@ -136,13 +144,18 @@ USB interface for connecting the MC to the NAZA Software Assistant program.
 Spektrum DX6i Transmitter
 -------------------------
 
+I am using a Spektrum DX6i transmitter.
+
 .. figure:: resources/spektrum-dx6i.png
 
 
 Spektrum AR610 Receiver
 -----------------------
 
+The DX6i came with a AR610 receiver so I'm using that on this quadcopter.
+
 .. figure:: resources/spektrum-ar610.jpg
+
 
 Binding
 +++++++
@@ -163,5 +176,17 @@ from 11 - 30V. I can easily use this charger at home and, more importantly,
 I can take this charger along with a small 12V battery to the park so I can
 charge a battery while I'm flying with the other one.
 
-I cut the end off the fly-lead and soldered on a connector matching my
+I cut the end off the fly-lead and soldered on a EC3 connector matching my
 batteries.
+
+It seems that the XT60 connector is the one primarily used in the quadcopter
+community so I'll be using that on my next quadcopter.
+
+
+Mini-S OSD
+----------
+
+For FPV flying I bought the Mini-S OSD on eBay from gadgetextreme primarily so
+I could see the battery voltage while flying FPV. The OSD is covered in the
+:ref:`mini-s-osd-label` section of the FPV section.
+
