@@ -1,7 +1,7 @@
 Hardware
 ========
 
-This section of the documentation covers how I installed the MC and the
+This section of the documentation covers how I installed the FC and the
 associated GPS receiver, LED status device and connected the Spektrum AR610
 receiver that came with the Spektrum DX6i transmitter.
 
@@ -60,32 +60,33 @@ discrete devices that are covered in more detail below.
 .. figure:: resources/dji-naza-lite.jpg
 
 
-MC
+FC
 +++
 
-The Main Controller (MC) is the brains of the flight system. The MC connects
-to the motor controllers (ESC) and the remote control receiver.
+The Flight Controller (FC) is the brains of the flight system. The FC connects
+to the motor's electronic speed controllers (ESC) and the remote control
+receiver.
 
 .. figure:: resources/dji-naza-mc.jpg
 
-The MC has a built-in Inertial Measurement Unit (IMU) that consists of one
+The FC has a built-in Inertial Measurement Unit (IMU) that consists of one
 3-axis accelerometer, one 3-axis gyroscope and a barometer for sensing the
 attitude and altitude.
 
-The MC should be placed as close as possible to the center of the frame. The
-line on the top of the MC should be aligned with the center line of the craft
+The FC should be placed as close as possible to the center of the frame. The
+line on the top of the FC should be aligned with the center line of the craft
 and should be pointing to the nose. This will result in the motor ports facing
 the front of the craft.
 
-The MC came with lots of 3M double sided tape strips which I used to stick it
+The FC came with lots of 3M double sided tape strips which I used to stick it
 in place to the F450 base plate. I connected the motor wires before sticking
-the MC in place.
+the FC in place.
 
 Connections
 ^^^^^^^^^^^
 
 =======  =======  ========  ========  ==============
-NAZA MC  NAZA VU  NAZA LED  NAZA GPS  Spektrum AR610
+NAZA FC  NAZA VU  NAZA LED  NAZA GPS  Spektrum AR610
 =======  =======  ========  ========  ==============
 A                                     AILE
 E                                     ELEV
@@ -104,20 +105,20 @@ VU
 +++
 
 The VU device monitors the battery Voltage and provides a regulated power
-feed to the MC.
+feed to the FC.
 
 .. figure:: resources/dji-naza-vu.jpg
 
 The VU device can be connected to a variety of batteries from a 2S (7.2V) to
 a 6S (26.0V). I have a 2200mAh 3S battery.
 
-The VU module connects to the X3 port on the MC.
+The VU module connects to the X3 port on the FC.
 
 
 GPS
 +++
 
-The GPS/Compass module provides the MC with position and direction information.
+The GPS/Compass module provides the FC with position and direction information.
 
 .. figure:: resources/dji-naza-gps.jpg
 
@@ -128,7 +129,7 @@ The GPS/Compass module came with a little carbon rod and two end pieces. I
 glued the end pieces to the carbon rod and stuck the GPS/Compass module to the
 top using a piece of 3M double sided tape. I then secured the base to one of
 the rear facing motor struts using the strut screws. This placed it towards
-the back of the craft close to the EXP port on the MC that it plugs in to. All
+the back of the craft close to the EXP port on the FC that it plugs in to. All
 the loose cable was secured with cable ties to make it tidy.
 
 
@@ -136,7 +137,7 @@ LED
 +++
 
 The LED unit provide visual status while operating the quadcopter and the
-USB interface for connecting the MC to the NAZA Software Assistant program.
+USB interface for connecting the FC to the NAZA Software Assistant program.
 
 .. figure:: resources/dji-naza-led.jpg
 
@@ -163,7 +164,7 @@ Binding
 Follow the bind procedure detailed in the section :ref:`binding-receiver-label`.
 
 Now that the receiver is bound the actions on the transmitter will be relayed
-to the receiver and passed on to the MC. We can now start configuring the
+to the receiver and passed on to the FC. We can now start configuring the
 transmitter settings.
 
 
