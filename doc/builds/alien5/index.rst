@@ -54,6 +54,8 @@ pins on the FC.
 Flight Controller
 -----------------
 
+I am using the MotoLab Tornado F3 Flight Controller from ImpulseRC.
+
 There are three separate power rails on the board.
 
 Lipo voltage - Connected to a resistor network for VBAT monitoring and to the pads for an external switching regulator.
@@ -161,20 +163,23 @@ I am using the :ref:`fatshark-attitude-v3-goggles-label`.
 Transmitter Configuration
 -------------------------
 
-I am using a Spektrum DX6i.
+I am using a Spektrum DX6i transmitter. The transmitter requires some
+adjustment so as to configure the mid-points of the channels around the
+1500 value and to configure the channel span to support approximately
+1000 - 2000 as expected by Cleanflight.
 
-The Motolab Tornado F3 can drive the receiver when powered by USB. So I
-connect the quad to Cleanflight Configurator and turn on the transmitter
+The Motolab Tornado F3 can drive the receiver when powered by USB which
+is convenient, meaning I don't need to plug in the battery to configure
+the flight controller.
+
+So, I connect the quad to Cleanflight Configurator, turn on the transmitter
 then go to the receiver tab. In here I can see if the channels are configured
 correctly.
 
-I'm expecting to see the values move right when I move the pitch up, the roll
-right and the yaw right. Initally the values were not spanning the ranges
-expected by Cleanflight and some of the channels moved the wrong way.
-
-The transmitter requires some adjustment so as to configure the mid-points of
-the channels around the 1500 value and to configure the channel span to
-support approximately 1000 - 2000 as expected by Cleanflight.
+When its all configured correctly I'm expecting to see the values move
+right when I move the pitch up, the roll right and the yaw right. Initally
+the values were not spanning the ranges expected by Cleanflight and some of
+the channels moved the wrong way.
 
 
 Reverse Channels
@@ -203,9 +208,10 @@ around 1500.
 - Rudder: left 54
 
 Once these settings are made I noted the minimum and maximum throttle values
-and went into the Configuration tab to update the min and max throttle values.
+and then went back into the Configuration tab to update the min and max
+throttle values.
 
-When this was done I could successfully arm and disarm the motors by using
+When this was all done I could successfully arm and disarm the motors by using
 the standard approach:
 
 - Arm: min throttle and yaw right.
@@ -276,3 +282,18 @@ Looptime: ?
 +----------------+---------+
 | TPA Breakpoint |         |
 +----------------+---------+
+
+
+LED Ring
+--------
+
+The Alien supports an optional LED ring that is placed at the rear of the quad.
+
+I came across a `flitetest <http://forum.flitetest.com/showthread.php?22417-ImpulseRC-Alien-build/page7>`_ forum post taht covered the LED ring in ome detail.
+
+From there I came across a good youtube video showing it off.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sQRhrbwMO7c" frameborder="0" allowfullscreen></iframe>
+

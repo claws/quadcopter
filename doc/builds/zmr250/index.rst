@@ -54,21 +54,22 @@ Arm: min throttle and yaw right.
 Disarm: min throttle and yaw left.
 
 
+Receiver
+--------
 
-S603 Receiver
--------------
+I am using a :ref:`s603-receiver-label`
 
-Bind Procedure
-++++++++++++++
 
-Ensure transmitter is off.
-Insert bind plug into Bind port in S603.
-Power up the S603 using 5 - 8 Volts supply. I used the PPM input lead to my Naze32.
-The S603 should power up and the LED should be flashing.
-Remove the bind plug from the S603.
-Ensure throttle is set to failsafe position on transmitter.
-Turn on transmitter and the bind switch (on my DX6i this is the Trainer switch). Keep holding it until the S603 LED goes steady. For me it transitioned through flashing fast, off, slow flashing before finally going steady.
-Done.
+Video Transmitter
+-----------------
+
+I am using the :ref:`200mw-immersionrc-video-transmitter-label`.
+
+
+FPV Goggles
+-----------
+
+I am using the :ref:`fatshark-attitude-v3-goggles-label`.
 
 
 Problems

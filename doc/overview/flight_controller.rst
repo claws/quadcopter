@@ -4,6 +4,22 @@ Flight Controller
 This section contains information on flight controllers.
 
 
+
+Buzzer
+------
+
+Fitting a buzzer is useful for a number of reasons. A buzzer provides a
+simple mechanism to warn you of low battery. Just fly it past you every so
+often. This is especially useful if you don't have an OSD.
+
+When a buzzer is connected, three beeps immediately after powering the board
+means that the gyroscope calibration has completed successfully.
+
+If you arm/disarm via the control stick, holding the stick in the disarm
+position will sound a repeating tone. This can be used as a lost-model locator
+so long as the quad still has a functioning receiver.
+
+
 Modes
 -----
 
@@ -55,3 +71,20 @@ then rate mode at its endpoints.
 
 This mode provides pilots with a stabilized flight but still perform rolls
 and flips when really pushing on the pitch/roll stick.
+
+
+PIDS
+----
+
+PID stands for Proportion, Integrate, Derivative control system approach.
+
+PID 1
++++++
+
+This is the 32bit rewrite of the original MultiWii 8bit flight control
+algorithm.
+
+PID 2
++++++
+
+This PID setting is called LuxFloat.
