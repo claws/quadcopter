@@ -15,13 +15,13 @@ Parts
 +=====================+==================================================+
 | Frame               | Alien 5" (225mm)                                 |
 +---------------------+--------------------------------------------------+
-| FC                  | Motolab Tornado STM32F3                          |
+| FC                  | Motolab Tornado STM32F3 (Betaflight 2.4.0)       |
 +---------------------+--------------------------------------------------+
-| ESC                 | FVT LittleBee 20A ESC (BLHeli)                   |
+| ESC                 | :ref:`fvt-littlebee-20a-label` (BLHeli)          |
 +---------------------+--------------------------------------------------+
 | Motors              | Cobra 2204 2300kv                                |
 +---------------------+--------------------------------------------------+
-| Propellors          | HQProp 5x4                                       |
+| Propellors          | :ref:`5045-hqprop-propellors-label`              |
 +---------------------+--------------------------------------------------+
 | Receiver            | Storm S603 (Spectrum Compatible)                 |
 +---------------------+--------------------------------------------------+
@@ -111,6 +111,18 @@ bootloader mode, bridge the boot pins and connect the board to the USB.
 The bridge only needs to be made as the USB connection is made and can
 be removed after.
 
+Once I enabled AIR_MODE I noticed that the quad would bob and bounce when I
+tried to land. These issues seems to have been encountered by many others.
+Until I find a good solution I bring the quad in close to the ground and then
+quickly disarm it as I land.
+
+A good example was captured in this YouTube video:
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/s7-EtdpZZqQ" frameborder="0" allowfullscreen></iframe>
+
 Instructions
 ^^^^^^^^^^^^
 
@@ -127,19 +139,38 @@ Instructions
 Your FC should now be flashed with the latest betaflight firmware.
 
 
+Configuration
+^^^^^^^^^^^^^
+
+Modes: AIR_MODE, ACRO_PLUS
+
+
+Electronic Speed Controller (ESC)
+---------------------------------
+
+I am currently using the :ref:`fvt-littlebee-20a-label` ESC.
+
+
 Batteries
 ---------
 
 As I have 20A ESC's I need to be looking for a battery capable of discharging
-at least 80A. So I should be looking for a minimum of something along the
+at least 80A. So, I should be looking for a minimum of something along the
 lines of:
 
  - 1300mAh 65C
  - 1800mAh 45C
 
- The batteries that I'm using on my ZMR250, Zippy 40C (50C burst) 1800mAh
- should be OK as a stop-gap until I get more suitable batteries for this
- quad setup.
+From my previous ZMR250 I have 3 :ref:`zippy-1800-3s-40c-label` batteries.
+The batteries that I'm using on my ZMR250, Zippy 40C (50C burst) 1800mAh
+should be OK as a stop-gap until I get more suitable batteries for this
+quad setup.
+
+I recently got 3 Turnigy A-Spec 4S 1300 mAh 60C to use with this Alien build.
+I notice some power improvement. I also notice that there is terrible noise
+on my FPV video when running these batteries. I have a cheap 12V BEC that
+supplies the camera power which I am suspecting is the culprit of the noisy
+signal that is causing the video problems.
 
 
 Receiver
@@ -272,15 +303,15 @@ Looptime: ?
 +----------------+---------+
 | Rates          | Value   |
 +================+=========+
-| Roll Rate      |         |
+| Roll Rate      |  0.70   |
 +----------------+---------+
-| Pitch Rate     |         |
+| Pitch Rate     |  0.70   |
 +----------------+---------+
-| Yaw Rate       |         |
+| Yaw Rate       |  0.40   |
 +----------------+---------+
-| TPA            |         |
+| TPA            |     0   |
 +----------------+---------+
-| TPA Breakpoint |         |
+| TPA Breakpoint |  1500   |
 +----------------+---------+
 
 
@@ -289,7 +320,7 @@ LED Ring
 
 The Alien supports an optional LED ring that is placed at the rear of the quad.
 
-I came across a `flitetest <http://forum.flitetest.com/showthread.php?22417-ImpulseRC-Alien-build/page7>`_ forum post taht covered the LED ring in ome detail.
+I came across a `flitetest <http://forum.flitetest.com/showthread.php?22417-ImpulseRC-Alien-build/page7>`_ forum post that covered the LED ring in ome detail.
 
 From there I came across a good youtube video showing it off.
 
@@ -297,3 +328,11 @@ From there I came across a good youtube video showing it off.
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/sQRhrbwMO7c" frameborder="0" allowfullscreen></iframe>
 
+Properllors
+-----------
+
+So far I have used the following propellors on this build.
+
+- :ref:`5030-gemfan-propellors-label`
+- :ref:`5045-hqprop-propellors-label`
+- :ref:`5046bn-gemfan-propellors-label`

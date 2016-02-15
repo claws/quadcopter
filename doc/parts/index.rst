@@ -5,11 +5,13 @@ This section covers some of the parts I have used on one or more
 quads.
 
 
+Video Transmitters
+------------------
 
 .. _25mw-immersionrc-video-transmitter-label:
 
 ImmersionRC 5.8GHz 25mW Video Transmitter
------------------------------------------
++++++++++++++++++++++++++++++++++++++++++
 
 The dip switches on the back were covered by the clear heat shrink so I
 used a craft knife to gently trim it away so I could change the switch
@@ -38,9 +40,8 @@ much more usable.
 
 .. _200mw-immersionrc-video-transmitter-label:
 
-
 ImmersionRC 5.8GHz 200mW Video Transmitter
-------------------------------------------
+++++++++++++++++++++++++++++++++++++++++++
 
 This unit provides the same IRC/FS channels as the 25mW unit plus another 8
 channels called RaceBand. These channels are much more widely spaced.
@@ -145,10 +146,13 @@ Switch  Band  Name                   CH1   CH2   CH3   CH4   CH5   CH6   CH7   C
 ======  ====  =====================  ====  ====  ====  ====  ====  ====  ====  ====
 
 
+FPV Cameras
+-----------
+
 .. _hs1177-fpv-camera-label:
 
 Surveilzone HS1177 Sony Super HAD II 600TVL
--------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++
 
 The Sony HS1177 Super HAD II CCD 600TVL camera supports power from 5-22V and
 has a 2.8mm lens which provides approximately 130 degree field of view.  It
@@ -175,10 +179,13 @@ dark.
     Exposure -> DWDR --> ON
 
 
+Receivers
+---------
+
 .. _s603-receiver-label:
 
 S603 Receiver
--------------
++++++++++++++
 
 This receiver is a cheap alternative for a Spectrum branded receiver. These
 can be found on sites like `banggood <http://www.banggood.com>`_. I have
@@ -187,7 +194,7 @@ solder wires directly to the PPM pins and then wrap it in some clear
 heatshrink.
 
 Bind Procedure
-++++++++++++++
+^^^^^^^^^^^^^^
 
 #. Ensure transmitter is off.
 #. Insert bind plug into Bind port in S603.
@@ -199,10 +206,13 @@ Bind Procedure
 #. That's it. Done.
 
 
+On-Screen Displays
+------------------
+
 .. _micro-minim-osd-label:
 
 Micro Minim OSD
----------------
++++++++++++++++
 
 The Micro MinimOSD is pretty much the same as the MinimOSD only smaller. It
 has a 16x16mm size. It supports monitoring two batteries up each up to 4S
@@ -234,12 +244,17 @@ the OSD and the most important (to me) sensor and video pins.
 .. figure:: resources/micro-minimosd.jpg
 
 
+Action Cameras
+--------------
+
+.. _xaomi-yi-label:
 
 Xiamoi Yi
----------
++++++++++
 
 The Xiamoi Yi is a cheap HD action camera similar to a GoPro. It provides
-a much cheaper (and hence can be put into harms way with less concern).
+a much cheaper option than a GoPro and hence can be put into harms way
+with less concern.
 
 First step is to ensure you have the latest firmware running. Use this
 `link <http://www.xiaoyi.com/update/sports>`_.
@@ -254,3 +269,85 @@ stretches it to fit the 16:9 1080 frame resolution. This results in some
 distortion.
 
 Here is the `script <http://fpvlab.com/forums/showthread.php?45118-Xiaomi-Yi-Enhanced-for-FPV-ers-(Script-Compilation>`_.
+
+
+.. _propellors-label:
+
+Propellors
+----------
+
+.. _5030-gemfan-propellors-label:
+
+5030 Gemfan
++++++++++++
+
+These are cheap flimsy propellors which were ideal while I was learning
+how to fly. They are pretty forgiving, in many crashes they did not break.
+I bought a pack of 20 from an eBay store.
+
+
+.. _5045-hqprop-propellors-label:
+
+5040 HQProp
++++++++++++
+
+These propellors feel better quality than the Gemfans. They feel firmer,
+less give. However, these propellors break very easily in a crash.
+
+
+.. _5046bn-gemfan-propellors-label:
+
+5046BN Gemfan
++++++++++++++
+
+These propellors were great while they lasted. I had been using the Gemfan
+5030 while learning to fly and once I started getting better I gave these
+a go. These propellors seemed a bit more responsive, perhaps because of
+their pitch and also they are thicker. They were surprisingly quiet.
+
+
+Electronic Speed Controllers
+----------------------------
+
+.. _afro-12a-esc-label:
+
+Afro 12A
+++++++++
+
+
+.. _fvt-littlebee-20a-label:
+
+FVT LittleBee 20A
++++++++++++++++++
+
+
+
+Batteries
+---------
+
+.. _zippy-1800-3s-40c-label:
+
+Zippy 1800mAh 3S 40C
+++++++++++++++++++++
+
+I bought these batteries for my ZMR250. I also use these on my Alien 5" too.
+They are rated as capable of 50C bursts..
+
+
+.. _tunigy-1800-4s-60c:
+
+Tunigy A-Spec 1300mAh 4S 60C
+++++++++++++++++++++++++++++
+
+These are compact little batteries. I definitely feel the power difference
+capared to the 3S batteries I have.
+
+
+When I use these on my Alien 5" build I noticed that there is extra artefacts
+on my FPV video. It is hard to describe. The video is still clear enought to
+fly with. There are horizontal lines across the screen of light and dark
+zones. These lines progressively scan down.
+
+I have a cheap 12V BEC that supplies the camera power with 12V power which I
+am suspecting is the culprit of the noisy signal that is causing the video
+problems.
