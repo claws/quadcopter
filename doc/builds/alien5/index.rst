@@ -42,7 +42,7 @@ Parts
 +---------------------+--------------------------------------------------+
 | VRX Antenna         | FatShark 5.8 GHz SpiroNET RHCP                   |
 +---------------------+--------------------------------------------------+
-| Transmitter         | Spektrum DX6i                                    |
+| Transmitter         | :ref:`spektrum-dx6i-label`                       |
 +---------------------+--------------------------------------------------+
 
 As I don't have an OSD yet I have added a buzzer to provide a low battery
@@ -172,6 +172,8 @@ on my FPV video when running these batteries. I have a cheap 12V BEC that
 supplies the camera power which I am suspecting is the culprit of the noisy
 signal that is causing the video problems.
 
+More recently I purchased 6 Dinogy 4S batteries. 3 1300 mAh and 3 18mAh.
+
 
 Receiver
 --------
@@ -230,8 +232,8 @@ To achieve this I adjusted the travel as well as modify the sub-trim.
 Sub-Trim
 ++++++++
 
-Adjust sub-trim in Transmitter so that Roll, Pitch and Yaw are centered
-around 1500.
+Adjust sub-trim in Transmitter so that Roll, Pitch and Yaw have a minimum
+around 1020 and are centered around 1500.
 
 - Throttle: down 27
 - Aileron: left 29
@@ -248,6 +250,82 @@ the standard approach:
 - Arm: min throttle and yaw right.
 - Disarm: min throttle and yaw left.
 
+
+++++++++++
+
+Mix three switches on the transmitter into the Flaps channel to output
+onto channel 6 (e.g Aux2) channel. Using this configuration we can get
+four positions (0%, 25%, 75%, 100%). The Flap switch overrides the mix
+switches.
+
+#. Enter the ADJUST LIST menu by clicking the scroll button.
+#. Enter the FLAPS option and configure it as follows:
+
+    .. code-block:: console
+
+        FLAPS
+
+             FLAP  ELEV
+        NORM ^100     0
+        LAND v100     0
+
+#. Exit the FLAPS menu.
+#. Enter the MIX1 menu. The goal here is to alter the settings such that
+   when the MIX switch is off the GEAR switch moves between GPS and Manual
+   and when the MIX switch is on the GEAR switch moves between GPS and
+   Attitude modes. Flip the MIX and GEAR switch on and modify the settings
+   until the Attitude mode is selected.
+
+    .. code-block:: console
+
+             MIX1
+
+        FLAP>   FLAP ACT
+        Rate D    0% U - 90%
+        SW ELEV D/R  TRIM ACT
+
+#. Exit the MIX1 menu.
+#. Enter the MIX2 menu. The goal here is to configure the settings such that
+   the Failsafe mode is selected irrespective of whether the Control Mode was
+   GPS, Attitude or Manual.
+
+    .. code-block:: console
+
+             MIX2
+
+        FLAP>   FLAP ACT
+        Rate D    0% U - 55%
+        SW AIL  D/R  TRIM ACT
+
+#. Exit the MIX2 menu.
+
+The resulting setup operates as follows:
+
++---------------------+---------+
+| Switch              | Value   |
++=====================+=========+
+| None                |    0 %  |
++---------------------+---------+
+| AIL D/R             |   25 %  |
++---------------------+---------+
+| ELEV D/R            |   50 %  |
++---------------------+---------+
+| AIL D/R + ELEV D/R  |   75 %  |
++---------------------+---------+
+| Flaps               |  100 %  |
++---------------------+---------+
+
+
+I use the Gear switch to switch between Angle mode and Acro mode. This
+is mostly just in case I get into trouble I can quickly switch into a
+self levelling mode.
+
+I use the Flap switch to enable Air Mode and Acro Plus mode.
+
+I use the AIL switch to enable the beeper mode. I still use the sticks
+to arm and disarm and I have found that by simply holding the stick in the
+disarm position will trigger the beeper to go off. This is just as good as
+the beeper mode.
 
 FPV Camera
 ----------
@@ -271,17 +349,21 @@ picture before blanking out then it would repeat this sequence forever.
 If I increased the power to 9V then the video signal was steady and
 reliable.
 
-I had a ZMR250 PDB laying around so I removed the small 12 regulator
-BEC from that, packaged it up nicely so it could sit logically inline
-between the battery and the camera. Physically it connects to the
-Alien PDB via JST connectors and sits between the camera and the central
-flight controller stack.
+I had a ZMR250 PDB laying around so I removed the small 12V regulator
+BEC from that, packaged it up nicely so it could sit in-line between the
+battery and the camera. Physically it connects to the Alien PDB via JST
+connectors and sits between the camera and the flight controller stack.
 
 I guess one good thing about this is that I should be able to run 3S
 and 4S batteries without damaging the Camera. Apparently the camera has
 a known issue running above 16V even though it states that it supports
 up to 22V.
 
+When I use 4S batteries on with this 12V regulator I noticed that there is
+extra artefacts on my FPV video. The video image is still clear enough to
+fly with but there are undesirable horizontal lines across the screen of
+light and dark zones that progressively scan down. I am suspecting is the
+culprit of the noisy signal is the 12V regulator.
 
 Settings
 --------
@@ -289,16 +371,34 @@ Settings
 Controller: Luxfloat
 Looptime: ?
 
-+----------------+---------+
-| PID            | Value   |
-+================+=========+
-| Roll           |         |
-+----------------+---------+
-| Pitch          |         |
-+----------------+---------+
-| Yaw            |         |
-+----------------+---------+
++----------------+---------+---------+---------+
+| PID            |    P    |    I    |    D    |
++================+=========+=========+=========+
+| Roll           |   1.5   |   0.04  |    20   |
++----------------+---------+---------+---------+
+| Pitch          |   1.5   |   0.04  |    20   |
++----------------+---------+---------+---------+
+| Yaw            |   4.0   |   0.04  |    10   |
++----------------+---------+---------+---------+
 
+Betaflight 2.6.0 Update
++++++++++++++++++++++++
+
+Controller: Luxfloat
+
++----------------+---------+---------+---------+
+| PID            |    P    |    I    |    D    |
++================+=========+=========+=========+
+| Roll           |   4.5   |   0.03  |    18   |
++----------------+---------+---------+---------+
+| Pitch          |   4.5   |   0.03  |    18   |
++----------------+---------+---------+---------+
+| Yaw            |   4.0   |   0.03  |     0   |
++----------------+---------+---------+---------+
+
+
+Rates
++++++
 
 +----------------+---------+
 | Rates          | Value   |
@@ -307,7 +407,7 @@ Looptime: ?
 +----------------+---------+
 | Pitch Rate     |  0.70   |
 +----------------+---------+
-| Yaw Rate       |  0.40   |
+| Yaw Rate       |  0.50   |
 +----------------+---------+
 | TPA            |     0   |
 +----------------+---------+
@@ -336,3 +436,9 @@ So far I have used the following propellors on this build.
 - :ref:`5030-gemfan-propellors-label`
 - :ref:`5045-hqprop-propellors-label`
 - :ref:`5046bn-gemfan-propellors-label`
+- :ref:`5045x3-gemfan-propellors-label`
+
+
+
+One motor would keep spinning after stopping. Backed off screws a little
+and all good.

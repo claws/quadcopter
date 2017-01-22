@@ -103,3 +103,66 @@ it was degrading it probably fed 12V to the 5V output intermittantly, which
 consequently damaged the first two flight controllers.
 
 I am going to replace the integrated PDB with a very simple stackable unit.
+
+
+Rebuild
+-------
+
+I sourced a stackable PDB from a fellow quad flyer and commenced the
+rebuild. It took a solid weekend. The motor connections to the ESC's
+remained the same but everything from the other side of the ESC needed
+to be re-wired.
+
+Once the rebuild was complete I attempted to connect it to Cleanflight
+but could not for some reason. I assumed that maybe there was nothing
+loaded on the Naze32 by default so I attempted to flash a new version
+of betaflight
+
+I went to the Silabs.com site the to their `Interface and Drivers`
+page to find the CP21XX driver package for OSX. This was called
+`CP210x USB to UART Bridge Drivers`. Silicon Labs >> Products >>
+MCUs >> USB to UART Bridge VCP Drivers.
+Once I had updated the driver I was able to successfully flash the
+Naze with both Cleanflight and Betaflight. I left the Naze with Betaflight.
+
+Use transmitter sub-trim to adjust mid-point of roll, pitch and yaw to
+around 1500. Then use travel adjust to attempt to get range from 1000
+to 2000. Typically I can get it to about 1030 - 2000.
+
+For some reason I was having trouble disarming. This was because I could
+only get the yaw down to about 1055 but the min_check was set to 1040.
+
+To fix this I used the CLI to set the following:
+
+.. code-block:: console
+
+    set min_check = 1065
+
+
+I originally had wired the power input for the video transmitter to
+the 12V BEC output. However, the power demands from the video
+transmitter must have been to much for the BEC to handle. Without the
+video transmitter connected the 12V output was just over 12V but when
+I connected the vide transitter it went down to 5V. I'm guessing that
+the video transmitter draws a lot of current that in turn drops the
+voltage.
+
+I have since connected the video transmitter directly to the battery
+power input on the power distribution board.
+
+After a crash I broke one of the arms on the ZMR. After replacing the arm
+I found that the motor on that arm no longer worked. I first spent some
+time replacing the ESC thinking that the problem was in the ESC but after
+swapping in a good ESC the motor still would not spin properly. I'm
+guessing that one of the phases on the motor was burnt out.
+
+I didn't have a spare 1806 2300KV so I order some DYS 2205 2100 thinking
+that they should be fine on the ZMR. I'll replace the Afro 12A ESC's with
+FVT 20A eventually.
+
+After fixing all these problems the ZMR still intermittently keels over just
+like it used to before. I've got new motors, new flight controller, new
+power distribution board which leaves just the ESC as the culprit. I am
+guessing that they fail when they get hot. It is very hard to replicate.
+
+

@@ -27,7 +27,7 @@ a single revolution. The greater the pitch the greater the thrust. Thirdly is
 the bore measurement which refers to the hole in the centre of the propellor.
 
 So a propellor that has a designation of 9545 has a length of 9", will drive
-forward 4.4" when 1V is applied and has a bore measurment of 5mm.
+forward 4.5" when 1V is applied and has a bore measurment of 5mm.
 
 Batteries
 ---------

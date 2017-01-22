@@ -37,7 +37,7 @@ Rate Mode
 
 
 This is the default mode that the Naze32 operates in. This mode is also
-commonly referred to as Manual Mode or Acro Mode. Rate mode uses the input
+commonly referred to as `Manual` or `Acro` mode. Rate mode uses the input
 from the gyro sensor along with the stick inputs and translates it into the
 rate at which the quad rotates on that particular axis.
 
@@ -71,6 +71,24 @@ then rate mode at its endpoints.
 
 This mode provides pilots with a stabilized flight but still perform rolls
 and flips when really pushing on the pitch/roll stick.
+
+
+Super Expo Mode
++++++++++++++++
+
+This setting was intially called `acro plus` but that term has since been
+deprecated in favour of `super expo`.
+
+At high stick inputs the flight controller applies a proportion of the
+requested stick input.This mode is used in conjunction with a configuration
+setting called acro_factor. If `acro_plus` factor is 50, then at full stick
+deflection the PID authority is reduced by 50% and input control is switched
+directly to the gyros. This results in fast rolls and importantly, just as
+much control at all other times.
+
+.. code-block:: console
+
+    set super_expo_factor = 50
 
 
 PIDS

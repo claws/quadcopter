@@ -4,6 +4,16 @@ Parts
 This section covers some of the parts I have used on one or more
 quads.
 
+Transmitter
+-----------
+
+
+.. _spektrum-dx6i-label:
+
+Spektrum DX6i
++++++++++++++
+
+
 
 Video Transmitters
 ------------------
@@ -145,6 +155,9 @@ Switch  Band  Name                   CH1   CH2   CH3   CH4   CH5   CH6   CH7   C
 1-1     4     RaceBand               5658  5695  5732  5769  5806  5843  5880  5917
 ======  ====  =====================  ====  ====  ====  ====  ====  ====  ====  ====
 
+I ended up purchasing the faceplate to replace the rubber eye-cups. This makes
+the goggles much more comfortable to wear.
+
 
 FPV Cameras
 -----------
@@ -160,8 +173,8 @@ seems to have a good reputation in the FPV community.
 
 The HS1177 FPV camera comes with a short On-Screen Display (OSD) controller
 cable with some connectors on the end. These connectors are common for
-security cameras and can be `confusing <http://paulnurkkala.com/surveilzone-hs1177-sony-600tvl-tuning-cable-modifications/>`_ for the lay-person from the
-quadcopter community.
+security cameras and can be `confusing <http://paulnurkkala.com/surveilzone-hs1177-sony-600tvl-tuning-cable-modifications/>`_ for the lay-person
+from the quadcopter community.
 
 I happened to have a BNC to RCA adapter laying around from an old security
 camera setup. This converts the video signal onto a connector style that I
@@ -177,6 +190,33 @@ dark.
 .. code-block:: console
 
     Exposure -> DWDR --> ON
+
+Once the focus is set it can be useful to hot-glue the focus locking ring
+into place as the intense vibrations present at all times on the quadcopter
+can work it loose over time.
+
+
+Eachine TX01
+++++++++++++
+
+This is a 25mW 5.8GHz 40 channel FPV transmitter that I bought this unit as
+the camera for a Tiny Whoop setup.
+
+A short press on the button cycles the currently selected band's channels.
+A longer press (~2s) enters the band selector which cycles through the bands
+A, B, E, F, and Race. A long press (~5s) cycles between on ('=') and off ('0').
+
+Once selected the settings are saved and retained.
+
+====  ======================  ====  ====  ====  ====  ====  ====  ====  ====
+Band  Name                    CH1   CH2   CH3   CH4   CH5   CH6   CH7   CH8
+====  ======================  ====  ====  ====  ====  ====  ====  ====  ====
+A     Band A                  5865  5845  5825  5805  5785  5765  5745  5725
+b     Band B                  5733  5752  5771  5790  5809  5828  5847  5866
+E     Band E                  5705  5685  5665  5645  5885  5905  5925  5945
+F     Band F (Fat Shark/IRC)  5740  5760  5780  5800  5820  5840  5860  5880
+r     RaceBand                5658  5695  5732  5769  5806  5843  5880  5917
+====  ======================  ====  ====  ====  ====  ====  ====  ====  ====
 
 
 Receivers
@@ -198,11 +238,18 @@ Bind Procedure
 
 #. Ensure transmitter is off.
 #. Insert bind plug into Bind port in S603.
-#. Power up the S603 using 5 - 8 Volts supply. I used the PPM input lead to my Naze32.
+#. Power up the S603 using 5 - 8 Volts supply. I used the PPM input lead to
+   my Naze32.
 #. The S603 should power up and the LED should be flashing.
 #. Remove the bind plug from the S603.
-#. Ensure throttle is set to failsafe position on transmitter.
-#. Turn on transmitter and the bind switch (on my DX6i this is the Trainer switch). Keep holding it until the S603 LED goes steady. For me it transitioned through flashing fast, off, slow flashing before finally going steady.
+#. Ensure that the throttle and Aux channel is set to desired failsafe
+   position on the transmitter.
+#. Turn on transmitter while holding down the bind switch (on my DX6i this
+   is the Trainer switch). Keep holding it until the S603 LED goes steady.
+   For me it transitioned through flashing fast, off, slow flashing before
+   finally going steady. Sometimes it takes a few tries before it is set
+   properly. If it doesn't end up with a steady LED then just repeat the
+   procedure until it works.
 #. That's it. Done.
 
 
@@ -306,6 +353,13 @@ a go. These propellors seemed a bit more responsive, perhaps because of
 their pitch and also they are thicker. They were surprisingly quiet.
 
 
+.. _5045x3-gemfan-propellors-label:
+
+5045 Triblade Gemfan
+++++++++++++++++++++
+
+
+
 Electronic Speed Controllers
 ----------------------------
 
@@ -313,6 +367,9 @@ Electronic Speed Controllers
 
 Afro 12A
 ++++++++
+
+This ESC's use the SimonK bootloader and hence do not support the flight
+controller pass-through programming method to update the ESC firmware.
 
 
 .. _fvt-littlebee-20a-label:
@@ -331,7 +388,7 @@ Zippy 1800mAh 3S 40C
 ++++++++++++++++++++
 
 I bought these batteries for my ZMR250. I also use these on my Alien 5" too.
-They are rated as capable of 50C bursts..
+They are rated as capable of 50C bursts.
 
 
 .. _tunigy-1800-4s-60c:
@@ -340,14 +397,32 @@ Tunigy A-Spec 1300mAh 4S 60C
 ++++++++++++++++++++++++++++
 
 These are compact little batteries. I definitely feel the power difference
-capared to the 3S batteries I have.
+capared to the 3S batteries I have. These batteries recommended charging at
+1C was is really slow.
 
 
-When I use these on my Alien 5" build I noticed that there is extra artefacts
-on my FPV video. It is hard to describe. The video is still clear enought to
-fly with. There are horizontal lines across the screen of light and dark
-zones. These lines progressively scan down.
+.. _dinogy-14.8v-1300mah-65c-label:
 
-I have a cheap 12V BEC that supplies the camera power with 12V power which I
-am suspecting is the culprit of the noisy signal that is causing the video
-problems.
+Dinogy 1300mAh 4S 65C
++++++++++++++++++++++
+
+I bought these batteries from banggood.com. They are more compact than
+similarly specified batteries from other vendors. They support charge
+rates up to 5C which is convenient. However, on the back they recommend
+charge rates of 1C to 3C. Inconsistent.
+
+
+.. figure:: resources/dinogy_14.8v_1300mah_65c.jpg
+
+
+.. _dinogy-14.8v-1500mah-65c-label:
+
+Dinogy 1500mAh 4S 65C
++++++++++++++++++++++
+
+I bought these batteries from banggood.com. They are more compact than
+similarly specified batteries from other vendors. They support charge
+rates up to 5C which is convenient. However, on the back they recommend
+charge rates of 1C to 3C. Inconsistent.
+
+.. figure:: resources/dinogy_14.8v_1500mah_65c.jpg
